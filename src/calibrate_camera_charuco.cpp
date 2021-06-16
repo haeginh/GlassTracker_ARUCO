@@ -153,6 +153,7 @@ static bool saveCameraParams(const string &filename, Size imageSize, float aspec
  */
 int CALIB_CHARUCO(int argc, char** argv) {
     CommandLineParser parser(argc, argv, keys);
+    if(argc==2)    parser.printMessage();
     parser.about(about);
 
     int squaresX = 5;//parser.get<int>("w");
